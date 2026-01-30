@@ -1,1 +1,1 @@
-# student_management
+# Student Management Python App
