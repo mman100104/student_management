@@ -1,0 +1,104 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block page_title %}{{page_title}}{% endblock page_title %}
+{% block content %}
+<section class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{total_students}}</h3>
+
+                        <p>Total Students</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        <h3>{{total_attendance}}</h3>
+
+                        <p>Total Attendance Taken</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3>{{total_leave}}</h3>
+
+                        <p>Total Leave Applied</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>{{total_subject}}</h3>
+
+                        <p>Total Subjects</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+            <div class="col-md-6">
+              <div class="card card-secondary">
+                  <div class="card-header">
+                      <h3 class="card-title">Work Distribution</h3>
+                  </div>
+                  <div class="card-body text-center">
+                      <img src="{{ pie_chart_image }}" 
+                          alt="Work Distribution" 
+                          style="max-width: 100%; height: auto;">
+                  </div>
+              </div>
+            </div>
+
+          <div class="col-md-6">
+              <div class="card card-secondary">
+                  <div class="card-header">
+                      <h3 class="card-title">My Subjects Attendance</h3>
+                  </div>
+                  <div class="card-body text-center">
+                      <img src="{{ bar_chart_image }}" 
+                          alt="Attendance Chart" 
+                          style="max-width: 100%; height: auto;">
+                  </div>
+              </div>
+          </div>
+            <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+</section>
+{% endblock content %}
+
